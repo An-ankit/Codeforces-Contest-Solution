@@ -1,0 +1,54 @@
+#include <bits/stdc++.h>
+#define ll long long
+ 
+using namespace std;
+void solution(){
+    int n,m;
+    cin>>n>>m;
+    vector<string> v(n);
+    string a,b;
+ 
+    string t1 = "01";
+    string t2 = "10";
+    int curr = 1;
+    while(curr<=m)
+    {
+        a += t1;
+        b += t2;
+        curr += 2;
+        if(curr >m){break;}
+        
+        a += t2;
+        b += t1;
+        curr +=2;
+    }
+    
+    for(int i=1;i<=n;i++){
+       if(i % 4 == 0 or i %4== 1){ v[i-1] = b; }
+       else v[i-1] = a;
+    }
+    
+    for( auto it :v)
+    {
+        for( auto ch: it)
+        {
+            cout<<ch<<" ";
+        }
+        cout<<endl;
+    }
+    
+}
+ 
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    
+    int t;
+    cin>>t;
+    while(t--){
+        solution();
+    }
+ 
+    return 0;
+}
