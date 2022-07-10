@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+#define ll long long
+ 
+using namespace std;
+void solution(){
+    string s;
+    cin>>s;
+    int k=s.size();
+    int n=stoi(s);
+    int x= n-pow(10,k-1);
+    cout<<x<<endl;
+}
+ 
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    
+    
+    int t;
+    cin>>t;
+    while(t--){
+        solution();
+    }
+    
+ 
+    return 0;
+}
